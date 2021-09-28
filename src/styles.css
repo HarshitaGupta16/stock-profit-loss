@@ -12,7 +12,6 @@ h1 {
 }
 
 .alert {
-  /* display: none; */
   color: white;
 }
 
@@ -25,7 +24,6 @@ label {
 }
 
 input {
-  /* display: block; */
   border: 1px solid black;
   padding: 0.5rem;
   font-size: 1.5rem;
@@ -75,27 +73,20 @@ button:hover {
 }
 
 footer {
-  /* position: fixed; */
-  left: 0px;
-  right: 0px;
   bottom: 0px;
-  margin-top: 1rem;
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  width: 100%;
 }
 
 .footer-header {
-  /* margin: 10% auto ; */
   font-weight: bold;
   font-size: larger;
-  padding: 0.5rem;
-  /* display: inline; */
+  /* padding: 0.5rem; */
   color: white;
 }
 
 .button-block {
   width: 600px;
-  /* margin-top: 40px; */
   margin: auto;
 }
 
@@ -108,7 +99,7 @@ footer {
   padding: 0rem 0.5rem;
   font-weight: bolder;
   display: inline-block;
-  margin: 10px;
+  margin: 0px 10px;
   cursor: pointer;
   color: white;
 }
