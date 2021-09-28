@@ -22,21 +22,23 @@ function submitHandler(event) {
 }
 
 function calculateProitAndLoss(initialPrice, quantity, currentPrice) {
-  if (initialPrice !== 0 && quantity !== 0 && currentPrice !== 0) {
+  if (initialPrice > 0 && quantity > 0 && currentPrice > 0) {
     if (initialPrice > currentPrice) {
       // Loss
       let loss = initialPrice - currentPrice;
+      let lossOnTotalQuantity = loss * quantity;
       let lossPercent = ((loss / initialPrice) * 100).toFixed(2);
       outputMessageDisplay(
-        `The loss is ${loss} and loss percentage is ${lossPercent}%`
+        `The loss is ${lossOnTotalQuantity} and loss percentage is ${lossPercent}%`
       );
       outputResult.style.display = "block";
       outputResult.style.backgroundColor = "#DC2626";
     } else if (initialPrice < currentPrice) {
       // Profit
       let profit = currentPrice - initialPrice;
+      let profitOnTotalQuantity = profit * quantity;
       let profitPercent = ((profit / initialPrice) * 100).toFixed(2);
-      outputMessageDisplay(`The profit is ${profit} and the profit 
+      outputMessageDisplay(`The profit is ${profitOnTotalQuantity} and the profit 
     percentage is ${profitPercent}%`);
       outputResult.style.display = "block";
       outputResult.style.backgroundColor = "#65A30D";
@@ -47,6 +49,9 @@ function calculateProitAndLoss(initialPrice, quantity, currentPrice) {
       outputResult.style.display = "block";
       outputResult.style.backgroundColor = "gray";
     }
+  } else {
+    outputMessageDisplay("Please enter value greater than 0");
+    outputResult.style.display = "block";
   }
 }
 
