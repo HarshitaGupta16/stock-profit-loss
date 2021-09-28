@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 
 .alert {
@@ -79,7 +79,6 @@ footer {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  padding: 2rem 2rem 2.1rem 0rem;
   margin-top: 1rem;
   position: absolute;
   bottom: 0;
